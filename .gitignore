@@ -1,8 +1,6 @@
 node_modules/
 test_fixtures/
-.DS_Store
 .node-version
 npm-debug.log
 todo.txt
 *.tgz
-.vscode/
