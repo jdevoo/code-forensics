@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`VCS Tasks vcs commit messages generation as a Function writes the vcs commit messages for each period into the temp folder: vcs_commit_messages_2016-02-01_2016-02-29.log 1`] = `"pre-existing content"`;
 

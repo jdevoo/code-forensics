@@ -10,7 +10,6 @@
 var Koa            = require('koa'),
     mount          = require('koa-mount'),
     serveStatic    = require('koa-static'),
-    LocalWebServer = require('local-web-server'),
     findup         = require('findup-sync'),
     ansi           = require('ansi-colors'),
     Path           = require('path'),
@@ -54,7 +53,7 @@ var options = {
   directory: publicPath,
   reportDir: dataPath,
   stack: [
-    'static',
+    'lws-static',
     StaticRoutes,
     ApiMiddleware
   ]
@@ -68,12 +67,19 @@ console.log(ansi.cyan('serving "/lib"  files from ' + libPath));
 console.log(ansi.cyan('serving "/data" files from ' + dataPath));
 console.log('Hit CTRL-C to stop the server');
 
-var lws = LocalWebServer.create(options);
-
-['SIGINT', 'SIGTERM'].forEach(function(event) {
-  process.on(event, function() {
-    lws.server.close();
-    console.log(ansi.yellow('\nWeb server stopped.'));
+import('local-web-server').then(function(LocalWebServer) {
+  options.moduleDir = [
+    Path.resolve(__dirname, '../node_modules'),
+    Path.resolve(__dirname, '../../node_modules'),
+    Path.resolve('/home/jdevoo/playground/code-forensic/node_modules')
+  ];
+  LocalWebServer.default.create(options).then(function(lws) {
+    ['SIGINT', 'SIGTERM'].forEach(function(event) {
+      process.on(event, function() {
+        lws.server.close();
+        console.log(ansi.yellow('\nWeb server stopped.'));
+      });
+    });
   });
 });
 

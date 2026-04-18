@@ -1,16 +1,16 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Hotspot analysis tasks hotspot-analysis for supported languages publishes an analysis report on code size, complexity and revisions for each file in the repository: 2015-03-01_2015-10-22_revisions-hotspot-data.json 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "children": Array [
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
-                  "children": Array [],
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [],
                   "name": "file1.rb",
                   "revisions": 29,
                   "sourceLines": 33,
@@ -18,10 +18,10 @@ Object {
                   "totalLines": 45,
                   "weight": 1,
                 },
-                Object {
-                  "children": Array [
-                    Object {
-                      "children": Array [],
+                {
+                  "children": [
+                    {
+                      "children": [],
                       "name": "file3.rb",
                       "revisions": 11,
                       "sourceLines": 15,
@@ -38,12 +38,12 @@ Object {
           ],
           "name": "ruby",
         },
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
-                  "children": Array [],
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [],
                   "name": "file2.css",
                   "revisions": 15,
                   "sourceLines": 23,
@@ -53,10 +53,10 @@ Object {
               ],
               "name": "styles",
             },
-            Object {
-              "children": Array [
-                Object {
-                  "children": Array [],
+            {
+              "children": [
+                {
+                  "children": [],
                   "name": "file4.js",
                   "sourceLines": 25,
                   "totalLines": 35,
@@ -76,20 +76,20 @@ Object {
 `;
 
 exports[`Hotspot analysis tasks hotspot-analysis for supported languages publishes an analysis report on code size, complexity and revisions for each file in the repository: manifest 1`] = `
-Object {
-  "dataFiles": Array [
-    Object {
+{
+  "dataFiles": [
+    {
       "fileUrl": "103d9a240cc5358f24927d51261fd9dcdb75b314/2015-03-01_2015-10-22_revisions-hotspot-data.json",
       "timePeriod": "2015-03-01_2015-10-22",
     },
   ],
   "dateRange": "2015-03-01_2015-10-22",
-  "enabledDiagrams": Array [
+  "enabledDiagrams": [
     "sloc",
     "complexity",
   ],
   "id": "103d9a240cc5358f24927d51261fd9dcdb75b314",
-  "parameters": Object {},
+  "parameters": {},
   "reportName": "hotspot-analysis",
   "taskName": "hotspot-analysis",
   "time": "2015-10-22T10:00:00.000Z",
@@ -97,26 +97,26 @@ Object {
 `;
 
 exports[`Hotspot analysis tasks hotspot-analysis with no supported languages publishes an analysis report on code size and revisions for each file in the repository: 2015-03-01_2015-10-22_revisions-hotspot-data.json 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "children": Array [
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
-                  "children": Array [],
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [],
                   "name": "file1.java",
                   "revisions": 29,
                   "sourceLines": 33,
                   "totalLines": 45,
                   "weight": 1,
                 },
-                Object {
-                  "children": Array [
-                    Object {
-                      "children": Array [],
+                {
+                  "children": [
+                    {
+                      "children": [],
                       "name": "file3.java",
                       "revisions": 11,
                       "sourceLines": 15,
@@ -132,12 +132,12 @@ Object {
           ],
           "name": "java",
         },
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
-                  "children": Array [],
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [],
                   "name": "file2.css",
                   "revisions": 15,
                   "sourceLines": 23,
@@ -147,10 +147,10 @@ Object {
               ],
               "name": "styles",
             },
-            Object {
-              "children": Array [
-                Object {
-                  "children": Array [],
+            {
+              "children": [
+                {
+                  "children": [],
                   "name": "file4.jsp",
                   "sourceLines": 25,
                   "totalLines": 35,
@@ -170,19 +170,19 @@ Object {
 `;
 
 exports[`Hotspot analysis tasks hotspot-analysis with no supported languages publishes an analysis report on code size and revisions for each file in the repository: manifest 1`] = `
-Object {
-  "dataFiles": Array [
-    Object {
+{
+  "dataFiles": [
+    {
       "fileUrl": "103d9a240cc5358f24927d51261fd9dcdb75b314/2015-03-01_2015-10-22_revisions-hotspot-data.json",
       "timePeriod": "2015-03-01_2015-10-22",
     },
   ],
   "dateRange": "2015-03-01_2015-10-22",
-  "enabledDiagrams": Array [
+  "enabledDiagrams": [
     "sloc",
   ],
   "id": "103d9a240cc5358f24927d51261fd9dcdb75b314",
-  "parameters": Object {},
+  "parameters": {},
   "reportName": "hotspot-analysis",
   "taskName": "hotspot-analysis",
   "time": "2015-10-22T10:00:00.000Z",

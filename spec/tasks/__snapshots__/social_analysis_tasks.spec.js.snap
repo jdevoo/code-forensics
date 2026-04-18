@@ -1,20 +1,20 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Social analysis tasks commit-message-analysis publishes a report on the frequency of words in commit messages: 2016-01-01_2016-01-31_commit-words-data.json 1`] = `
-Array [
-  Object {
+[
+  {
     "count": 4,
     "text": "message",
   },
-  Object {
+  {
     "count": 2,
     "text": "abc",
   },
-  Object {
+  {
     "count": 2,
     "text": "second",
   },
-  Object {
+  {
     "count": 2,
     "text": "third",
   },
@@ -22,16 +22,16 @@ Array [
 `;
 
 exports[`Social analysis tasks commit-message-analysis publishes a report on the frequency of words in commit messages: 2016-02-01_2016-02-28_commit-words-data.json 1`] = `
-Array [
-  Object {
+[
+  {
     "count": 3,
     "text": "message",
   },
-  Object {
+  {
     "count": 2,
     "text": "www",
   },
-  Object {
+  {
     "count": 2,
     "text": "last",
   },
@@ -39,23 +39,23 @@ Array [
 `;
 
 exports[`Social analysis tasks commit-message-analysis publishes a report on the frequency of words in commit messages: manifest 1`] = `
-Object {
-  "dataFiles": Array [
-    Object {
+{
+  "dataFiles": [
+    {
       "fileUrl": "7a52722f61ebbf6b67c3052225297ec62701debb/2016-01-01_2016-01-31_commit-words-data.json",
       "timePeriod": "2016-01-01_2016-01-31",
     },
-    Object {
+    {
       "fileUrl": "7a52722f61ebbf6b67c3052225297ec62701debb/2016-02-01_2016-02-28_commit-words-data.json",
       "timePeriod": "2016-02-01_2016-02-28",
     },
   ],
   "dateRange": "2016-01-01_2016-02-28",
-  "enabledDiagrams": Array [
+  "enabledDiagrams": [
     "commit-words",
   ],
   "id": "7a52722f61ebbf6b67c3052225297ec62701debb",
-  "parameters": Object {
+  "parameters": {
     "minWordCount": 2,
     "timeSplit": "eom",
   },
@@ -66,38 +66,38 @@ Object {
 `;
 
 exports[`Social analysis tasks developer-coupling-analysis when all analyses are supported for the VCS type publishes a report on ownership and communication coupling between main developers: 2016-01-01_2016-10-22_communication-network-data.json 1`] = `
-Array [
-  Object {
-    "coupledDeveloper": Object {
+[
+  {
+    "coupledDeveloper": {
       "name": "Dev2",
       "team": "Team 1",
     },
     "couplingStrength": 55,
-    "developer": Object {
+    "developer": {
       "name": "Dev1",
       "team": "Team 1",
     },
     "sharedCommits": 65,
   },
-  Object {
-    "coupledDeveloper": Object {
+  {
+    "coupledDeveloper": {
       "name": "Dev1",
       "team": "Team 1",
     },
     "couplingStrength": 51,
-    "developer": Object {
+    "developer": {
       "name": "Dev3",
       "team": "Team 2",
     },
     "sharedCommits": 194,
   },
-  Object {
-    "coupledDeveloper": Object {
+  {
+    "coupledDeveloper": {
       "name": "Dev5",
       "team": "Team 2",
     },
     "couplingStrength": 48,
-    "developer": Object {
+    "developer": {
       "name": "Dev4",
       "team": "Team 2",
     },
@@ -107,17 +107,17 @@ Array [
 `;
 
 exports[`Social analysis tasks developer-coupling-analysis when all analyses are supported for the VCS type publishes a report on ownership and communication coupling between main developers: 2016-01-01_2016-10-22_main-dev-coupling-data.json 1`] = `
-Object {
-  "children": Array [
-    Object {
+{
+  "children": [
+    {
       "authors": 4,
-      "coupledEntries": Array [
-        Object {
+      "coupledEntries": [
+        {
           "couplingDegree": 41,
           "path": "test_file4",
           "revisionsAvg": 22,
         },
-        Object {
+        {
           "couplingDegree": 23,
           "path": "test_file3",
           "revisionsAvg": 12,
@@ -129,10 +129,10 @@ Object {
       "revisions": 54,
       "weight": 0.5934065934065934,
     },
-    Object {
+    {
       "authors": 2,
-      "coupledEntries": Array [
-        Object {
+      "coupledEntries": [
+        {
           "couplingDegree": 66,
           "path": "test_file5",
           "revisionsAvg": 31,
@@ -144,15 +144,15 @@ Object {
       "revisions": 68,
       "weight": 0.7472527472527473,
     },
-    Object {
+    {
       "authors": 3,
-      "coupledEntries": Array [
-        Object {
+      "coupledEntries": [
+        {
           "couplingDegree": 49,
           "path": "test_file5",
           "revisionsAvg": 29,
         },
-        Object {
+        {
           "couplingDegree": 23,
           "path": "test_file1",
           "revisionsAvg": 12,
@@ -164,10 +164,10 @@ Object {
       "revisions": 24,
       "weight": 0.26373626373626374,
     },
-    Object {
+    {
       "authors": 5,
-      "coupledEntries": Array [
-        Object {
+      "coupledEntries": [
+        {
           "couplingDegree": 41,
           "path": "test_file1",
           "revisionsAvg": 22,
@@ -179,15 +179,15 @@ Object {
       "revisions": 52,
       "weight": 0.5714285714285714,
     },
-    Object {
+    {
       "authors": 6,
-      "coupledEntries": Array [
-        Object {
+      "coupledEntries": [
+        {
           "couplingDegree": 66,
           "path": "test_file2",
           "revisionsAvg": 31,
         },
-        Object {
+        {
           "couplingDegree": 49,
           "path": "test_file3",
           "revisionsAvg": 29,
@@ -204,26 +204,26 @@ Object {
 `;
 
 exports[`Social analysis tasks developer-coupling-analysis when all analyses are supported for the VCS type publishes a report on ownership and communication coupling between main developers: manifest 1`] = `
-Object {
-  "dataFiles": Array [
-    Object {
+{
+  "dataFiles": [
+    {
       "fileType": "communication-network",
       "fileUrl": "543b3dfc5f7eea00986cf67fe3a738f9432366d5/2016-01-01_2016-10-22_communication-network-data.json",
       "timePeriod": "2016-01-01_2016-10-22",
     },
-    Object {
+    {
       "fileType": "code-ownership",
       "fileUrl": "543b3dfc5f7eea00986cf67fe3a738f9432366d5/2016-01-01_2016-10-22_main-dev-coupling-data.json",
       "timePeriod": "2016-01-01_2016-10-22",
     },
   ],
   "dateRange": "2016-01-01_2016-10-22",
-  "enabledDiagrams": Array [
+  "enabledDiagrams": [
     "main-developer-coupling",
     "communication-network",
   ],
   "id": "543b3dfc5f7eea00986cf67fe3a738f9432366d5",
-  "parameters": Object {
+  "parameters": {
     "maxCoupledFiles": 2,
   },
   "reportName": "developer-coupling",
@@ -233,38 +233,38 @@ Object {
 `;
 
 exports[`Social analysis tasks developer-coupling-analysis when the coupling analysis is not supported for the vcs type publishes a report on communication coupling only: 2016-01-01_2016-10-22_communication-network-data.json 1`] = `
-Array [
-  Object {
-    "coupledDeveloper": Object {
+[
+  {
+    "coupledDeveloper": {
       "name": "Dev2",
       "team": "Team 1",
     },
     "couplingStrength": 55,
-    "developer": Object {
+    "developer": {
       "name": "Dev1",
       "team": "Team 1",
     },
     "sharedCommits": 65,
   },
-  Object {
-    "coupledDeveloper": Object {
+  {
+    "coupledDeveloper": {
       "name": "Dev1",
       "team": "Team 1",
     },
     "couplingStrength": 51,
-    "developer": Object {
+    "developer": {
       "name": "Dev3",
       "team": "Team 2",
     },
     "sharedCommits": 194,
   },
-  Object {
-    "coupledDeveloper": Object {
+  {
+    "coupledDeveloper": {
       "name": "Dev5",
       "team": "Team 2",
     },
     "couplingStrength": 48,
-    "developer": Object {
+    "developer": {
       "name": "Dev4",
       "team": "Team 2",
     },
@@ -274,20 +274,20 @@ Array [
 `;
 
 exports[`Social analysis tasks developer-coupling-analysis when the coupling analysis is not supported for the vcs type publishes a report on communication coupling only: manifest 1`] = `
-Object {
-  "dataFiles": Array [
-    Object {
+{
+  "dataFiles": [
+    {
       "fileType": "communication-network",
       "fileUrl": "543b3dfc5f7eea00986cf67fe3a738f9432366d5/2016-01-01_2016-10-22_communication-network-data.json",
       "timePeriod": "2016-01-01_2016-10-22",
     },
   ],
   "dateRange": "2016-01-01_2016-10-22",
-  "enabledDiagrams": Array [
+  "enabledDiagrams": [
     "communication-network",
   ],
   "id": "543b3dfc5f7eea00986cf67fe3a738f9432366d5",
-  "parameters": Object {
+  "parameters": {
     "maxCoupledFiles": 2,
   },
   "reportName": "developer-coupling",
@@ -297,20 +297,20 @@ Object {
 `;
 
 exports[`Social analysis tasks developer-effort-analysis when no team information exists publishes only a report on the revisions distribution between developers: 2016-01-01_2016-10-22_developer-effort-data.json 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "children": Array [
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
                   "name": "Dev1",
                   "ownership": 71,
                   "revisions": 5,
                 },
-                Object {
+                {
                   "name": "Dev2",
                   "ownership": 29,
                   "revisions": 2,
@@ -321,21 +321,21 @@ Object {
           ],
           "name": "a",
         },
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
+        {
+          "children": [
+            {
+              "children": [
+                {
                   "name": "Dev1",
                   "ownership": 53,
                   "revisions": 8,
                 },
-                Object {
+                {
                   "name": "Dev3",
                   "ownership": 33,
                   "revisions": 5,
                 },
-                Object {
+                {
                   "name": "Dev4",
                   "ownership": 13,
                   "revisions": 2,
@@ -346,16 +346,16 @@ Object {
           ],
           "name": "b",
         },
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
+        {
+          "children": [
+            {
+              "children": [
+                {
                   "name": "Dev5",
                   "ownership": 59,
                   "revisions": 10,
                 },
-                Object {
+                {
                   "name": "Dev with no team",
                   "ownership": 41,
                   "revisions": 7,
@@ -374,20 +374,20 @@ Object {
 `;
 
 exports[`Social analysis tasks developer-effort-analysis when no team information exists publishes only a report on the revisions distribution between developers: manifest 1`] = `
-Object {
-  "dataFiles": Array [
-    Object {
+{
+  "dataFiles": [
+    {
       "fileType": "individual-effort",
       "fileUrl": "003a77e0e1ae9594f143f49d2b211269308c4489/2016-01-01_2016-10-22_developer-effort-data.json",
       "timePeriod": "2016-01-01_2016-10-22",
     },
   ],
   "dateRange": "2016-01-01_2016-10-22",
-  "enabledDiagrams": Array [
+  "enabledDiagrams": [
     "individual-effort",
   ],
   "id": "003a77e0e1ae9594f143f49d2b211269308c4489",
-  "parameters": Object {},
+  "parameters": {},
   "reportName": "developer-effort",
   "taskName": "developer-effort-analysis",
   "time": "2016-10-22T10:00:00.000Z",
@@ -395,20 +395,20 @@ Object {
 `;
 
 exports[`Social analysis tasks developer-effort-analysis when team information exists publishes reports on the revisions distribution between developers and between teams: 2016-01-01_2016-10-22_developer-effort-data.json 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "children": Array [
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
                   "name": "Dev1",
                   "ownership": 71,
                   "revisions": 5,
                 },
-                Object {
+                {
                   "name": "Dev2",
                   "ownership": 29,
                   "revisions": 2,
@@ -419,21 +419,21 @@ Object {
           ],
           "name": "a",
         },
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
+        {
+          "children": [
+            {
+              "children": [
+                {
                   "name": "Dev1",
                   "ownership": 53,
                   "revisions": 8,
                 },
-                Object {
+                {
                   "name": "Dev3",
                   "ownership": 33,
                   "revisions": 5,
                 },
-                Object {
+                {
                   "name": "Dev4",
                   "ownership": 13,
                   "revisions": 2,
@@ -444,16 +444,16 @@ Object {
           ],
           "name": "b",
         },
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
+        {
+          "children": [
+            {
+              "children": [
+                {
                   "name": "Dev5",
                   "ownership": 59,
                   "revisions": 10,
                 },
-                Object {
+                {
                   "name": "Dev with no team",
                   "ownership": 41,
                   "revisions": 7,
@@ -472,15 +472,15 @@ Object {
 `;
 
 exports[`Social analysis tasks developer-effort-analysis when team information exists publishes reports on the revisions distribution between developers and between teams: 2016-01-01_2016-10-22_team-effort-data.json 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "children": Array [
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
                   "name": "Team 1",
                   "ownership": 100,
                   "revisions": 7,
@@ -491,16 +491,16 @@ Object {
           ],
           "name": "a",
         },
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
+        {
+          "children": [
+            {
+              "children": [
+                {
                   "name": "Team 1",
                   "ownership": 53,
                   "revisions": 8,
                 },
-                Object {
+                {
                   "name": "Team 2",
                   "ownership": 47,
                   "revisions": 7,
@@ -511,16 +511,16 @@ Object {
           ],
           "name": "b",
         },
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
+        {
+          "children": [
+            {
+              "children": [
+                {
                   "name": "Team 2",
                   "ownership": 59,
                   "revisions": 10,
                 },
-                Object {
+                {
                   "name": "N/A (Dev with no team)",
                   "ownership": 41,
                   "revisions": 7,
@@ -539,26 +539,26 @@ Object {
 `;
 
 exports[`Social analysis tasks developer-effort-analysis when team information exists publishes reports on the revisions distribution between developers and between teams: manifest 1`] = `
-Object {
-  "dataFiles": Array [
-    Object {
+{
+  "dataFiles": [
+    {
       "fileType": "individual-effort",
       "fileUrl": "003a77e0e1ae9594f143f49d2b211269308c4489/2016-01-01_2016-10-22_developer-effort-data.json",
       "timePeriod": "2016-01-01_2016-10-22",
     },
-    Object {
+    {
       "fileType": "team-effort",
       "fileUrl": "003a77e0e1ae9594f143f49d2b211269308c4489/2016-01-01_2016-10-22_team-effort-data.json",
       "timePeriod": "2016-01-01_2016-10-22",
     },
   ],
   "dateRange": "2016-01-01_2016-10-22",
-  "enabledDiagrams": Array [
+  "enabledDiagrams": [
     "individual-effort",
     "team-effort",
   ],
   "id": "003a77e0e1ae9594f143f49d2b211269308c4489",
-  "parameters": Object {},
+  "parameters": {},
   "reportName": "developer-effort",
   "taskName": "developer-effort-analysis",
   "time": "2016-10-22T10:00:00.000Z",
@@ -566,28 +566,28 @@ Object {
 `;
 
 exports[`Social analysis tasks knowledge-map-analysis for a supported vcs type when no team information exists publishes a report on the main developer for each file: 2016-01-01_2016-10-22_knowledge-map-data.json 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "children": Array [
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
                   "addedLines": 10,
-                  "children": Array [],
+                  "children": [],
                   "mainDev": "Dev1",
                   "name": "file1.rb",
                   "ownership": 53,
                   "sourceLines": 33,
                   "totalLines": 45,
                 },
-                Object {
-                  "children": Array [
-                    Object {
+                {
+                  "children": [
+                    {
                       "addedLines": 9,
-                      "children": Array [],
+                      "children": [],
                       "mainDev": "Dev5",
                       "name": "file3.rb",
                       "ownership": 44,
@@ -603,13 +603,13 @@ Object {
           ],
           "name": "ruby",
         },
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
+        {
+          "children": [
+            {
+              "children": [
+                {
                   "addedLines": 23,
-                  "children": Array [],
+                  "children": [],
                   "mainDev": "Dev2",
                   "name": "file2.css",
                   "ownership": 26,
@@ -619,11 +619,11 @@ Object {
               ],
               "name": "styles",
             },
-            Object {
-              "children": Array [
-                Object {
+            {
+              "children": [
+                {
                   "addedLines": 16,
-                  "children": Array [],
+                  "children": [],
                   "mainDev": "Dev4",
                   "name": "file4.js",
                   "ownership": 29,
@@ -644,19 +644,19 @@ Object {
 `;
 
 exports[`Social analysis tasks knowledge-map-analysis for a supported vcs type when no team information exists publishes a report on the main developer for each file: manifest 1`] = `
-Object {
-  "dataFiles": Array [
-    Object {
+{
+  "dataFiles": [
+    {
       "fileUrl": "4ba9307ceb8a58877cfad22bb9b4f7cf5bec32f8/2016-01-01_2016-10-22_knowledge-map-data.json",
       "timePeriod": "2016-01-01_2016-10-22",
     },
   ],
   "dateRange": "2016-01-01_2016-10-22",
-  "enabledDiagrams": Array [
+  "enabledDiagrams": [
     "individual-knowledge-map",
   ],
   "id": "4ba9307ceb8a58877cfad22bb9b4f7cf5bec32f8",
-  "parameters": Object {},
+  "parameters": {},
   "reportName": "knowledge-map",
   "taskName": "knowledge-map-analysis",
   "time": "2016-10-22T10:00:00.000Z",
@@ -664,17 +664,17 @@ Object {
 `;
 
 exports[`Social analysis tasks knowledge-map-analysis for a supported vcs type when team information exists publishes a report on the main developer for each file: 2016-01-01_2016-10-22_knowledge-map-data.json 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "children": Array [
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
                   "addedLines": 10,
-                  "children": Array [],
+                  "children": [],
                   "mainDev": "Dev1",
                   "name": "file1.rb",
                   "ownership": 53,
@@ -682,11 +682,11 @@ Object {
                   "team": "Team 1",
                   "totalLines": 45,
                 },
-                Object {
-                  "children": Array [
-                    Object {
+                {
+                  "children": [
+                    {
                       "addedLines": 9,
-                      "children": Array [],
+                      "children": [],
                       "mainDev": "Dev5",
                       "name": "file3.rb",
                       "ownership": 44,
@@ -703,13 +703,13 @@ Object {
           ],
           "name": "ruby",
         },
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
+        {
+          "children": [
+            {
+              "children": [
+                {
                   "addedLines": 23,
-                  "children": Array [],
+                  "children": [],
                   "mainDev": "Dev2",
                   "name": "file2.css",
                   "ownership": 26,
@@ -720,11 +720,11 @@ Object {
               ],
               "name": "styles",
             },
-            Object {
-              "children": Array [
-                Object {
+            {
+              "children": [
+                {
                   "addedLines": 16,
-                  "children": Array [],
+                  "children": [],
                   "mainDev": "Dev4",
                   "name": "file4.js",
                   "ownership": 29,
@@ -746,20 +746,20 @@ Object {
 `;
 
 exports[`Social analysis tasks knowledge-map-analysis for a supported vcs type when team information exists publishes a report on the main developer for each file: manifest 1`] = `
-Object {
-  "dataFiles": Array [
-    Object {
+{
+  "dataFiles": [
+    {
       "fileUrl": "4ba9307ceb8a58877cfad22bb9b4f7cf5bec32f8/2016-01-01_2016-10-22_knowledge-map-data.json",
       "timePeriod": "2016-01-01_2016-10-22",
     },
   ],
   "dateRange": "2016-01-01_2016-10-22",
-  "enabledDiagrams": Array [
+  "enabledDiagrams": [
     "individual-knowledge-map",
     "team-knowledge-map",
   ],
   "id": "4ba9307ceb8a58877cfad22bb9b4f7cf5bec32f8",
-  "parameters": Object {},
+  "parameters": {},
   "reportName": "knowledge-map",
   "taskName": "knowledge-map-analysis",
   "time": "2016-10-22T10:00:00.000Z",

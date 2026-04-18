@@ -1,12 +1,12 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Coupling analysis tasks sum-of-coupling-analysis publishes a report on the sum of coupling for each file: 2015-03-01_2015-10-22_sum-of-coupling-data.json 1`] = `
-Array [
-  Object {
+[
+  {
     "path": "test_file1",
     "soc": 34,
   },
-  Object {
+  {
     "path": "test_file2",
     "soc": 62,
   },
@@ -14,19 +14,19 @@ Array [
 `;
 
 exports[`Coupling analysis tasks sum-of-coupling-analysis publishes a report on the sum of coupling for each file: manifest 1`] = `
-Object {
-  "dataFiles": Array [
-    Object {
+{
+  "dataFiles": [
+    {
       "fileUrl": "cccbd27e6e715fa48728f9f6363785835b73ba58/2015-03-01_2015-10-22_sum-of-coupling-data.json",
       "timePeriod": "2015-03-01_2015-10-22",
     },
   ],
   "dateRange": "2015-03-01_2015-10-22",
-  "enabledDiagrams": Array [
+  "enabledDiagrams": [
     "sum-of-coupling",
   ],
   "id": "cccbd27e6e715fa48728f9f6363785835b73ba58",
-  "parameters": Object {},
+  "parameters": {},
   "reportName": "sum-of-coupling",
   "taskName": "sum-of-coupling-analysis",
   "time": "2015-10-22T10:00:00.000Z",
@@ -34,15 +34,15 @@ Object {
 `;
 
 exports[`Coupling analysis tasks temporal-coupling-analysis publishes as many reports as the given time periods with coupling information between each file and a target file: 2016-01-01_2016-01-31_temporal-coupling-data.json 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "children": Array [
-        Object {
-          "children": Array [
-            Object {
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [
+            {
               "addedLines": 295,
-              "children": Array [],
+              "children": [],
               "couplingDegree": 23,
               "deletedLines": 209,
               "name": "file1",
@@ -54,11 +54,11 @@ Object {
           ],
           "name": "a",
         },
-        Object {
-          "children": Array [
-            Object {
+        {
+          "children": [
+            {
               "addedLines": 40,
-              "children": Array [],
+              "children": [],
               "deletedLines": 61,
               "name": "file2",
               "sourceLines": 23,
@@ -68,11 +68,11 @@ Object {
           ],
           "name": "b",
         },
-        Object {
-          "children": Array [
-            Object {
+        {
+          "children": [
+            {
               "addedLines": 71,
-              "children": Array [],
+              "children": [],
               "couplingDegree": 30,
               "deletedLines": 37,
               "name": "file3",
@@ -84,10 +84,10 @@ Object {
           ],
           "name": "c",
         },
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [],
+        {
+          "children": [
+            {
+              "children": [],
               "name": "file4",
               "sourceLines": 25,
               "totalLines": 35,
@@ -96,9 +96,9 @@ Object {
           ],
           "name": "d",
         },
-        Object {
+        {
           "addedLines": 150,
-          "children": Array [],
+          "children": [],
           "deletedLines": 60,
           "name": "target_file",
           "sourceLines": 55,
@@ -113,15 +113,15 @@ Object {
 `;
 
 exports[`Coupling analysis tasks temporal-coupling-analysis publishes as many reports as the given time periods with coupling information between each file and a target file: 2016-03-01_2016-03-31_temporal-coupling-data.json 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "children": Array [
-        Object {
-          "children": Array [
-            Object {
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [
+            {
               "addedLines": 147,
-              "children": Array [],
+              "children": [],
               "couplingDegree": 10,
               "deletedLines": 56,
               "name": "file1",
@@ -133,11 +133,11 @@ Object {
           ],
           "name": "a",
         },
-        Object {
-          "children": Array [
-            Object {
+        {
+          "children": [
+            {
               "addedLines": 19,
-              "children": Array [],
+              "children": [],
               "deletedLines": 6,
               "name": "file2",
               "sourceLines": 23,
@@ -147,10 +147,10 @@ Object {
           ],
           "name": "b",
         },
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [],
+        {
+          "children": [
+            {
+              "children": [],
               "name": "file3",
               "sourceLines": 15,
               "totalLines": 21,
@@ -159,11 +159,11 @@ Object {
           ],
           "name": "c",
         },
-        Object {
-          "children": Array [
-            Object {
+        {
+          "children": [
+            {
               "addedLines": 91,
-              "children": Array [],
+              "children": [],
               "couplingDegree": 33,
               "deletedLines": 38,
               "name": "file4",
@@ -175,9 +175,9 @@ Object {
           ],
           "name": "d",
         },
-        Object {
+        {
           "addedLines": 50,
-          "children": Array [],
+          "children": [],
           "deletedLines": 10,
           "name": "target_file",
           "sourceLines": 55,
@@ -192,23 +192,23 @@ Object {
 `;
 
 exports[`Coupling analysis tasks temporal-coupling-analysis publishes as many reports as the given time periods with coupling information between each file and a target file: manifest 1`] = `
-Object {
-  "dataFiles": Array [
-    Object {
+{
+  "dataFiles": [
+    {
       "fileUrl": "7a25dcda038c13953d38dcf1969cf09fadf23ad0/2016-01-01_2016-01-31_temporal-coupling-data.json",
       "timePeriod": "2016-01-01_2016-01-31",
     },
-    Object {
+    {
       "fileUrl": "7a25dcda038c13953d38dcf1969cf09fadf23ad0/2016-03-01_2016-03-31_temporal-coupling-data.json",
       "timePeriod": "2016-03-01_2016-03-31",
     },
   ],
   "dateRange": "2016-01-01_2016-03-31",
-  "enabledDiagrams": Array [
+  "enabledDiagrams": [
     "temporal-coupling",
   ],
   "id": "7a25dcda038c13953d38dcf1969cf09fadf23ad0",
-  "parameters": Object {
+  "parameters": {
     "targetFile": "test/target_file",
     "timeSplit": "eom",
   },
