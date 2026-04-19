@@ -1,6 +1,16 @@
 # Changelog
 
 ### [Unreleased]
+#### Added
+- Upgraded the Code Maat dependency to version `1.0.4`
+- Upgraded the UI diagrams to use `d3` version 7
+- Transitioned to `gulp` version 5
+- Transitioned to Node.js versions `>=13.0` (officially verified in README and package.json)
+- Updated the Code Maat Dockerfile to use `eclipse-temurin:25-jre`
+- Improved Word Cloud visualization with better scaling and centering
+- Added dynamic Y-axis scaling to line charts in System Evolution diagrams
+- Improved Treemap rendering with non-scaling strokes for better readability
+- Updated installation instructions to recommend `npx` for running local Gulp tasks
 
 ### [3.1.0] - 2021-03-10
 
