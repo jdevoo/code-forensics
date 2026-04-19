@@ -9,26 +9,24 @@ code-forensics
 This project is based on the excellent work of **Adam Tornhill** and his command line tool [Code Maat](https://github.com/adamtornhill/code-maat). The majority of the analysis that **code-forensics** performs are actually described in Adam's book [Your Code as a Crime Scene](https://pragprog.com/book/atcrime/your-code-as-a-crime-scene).
 
 ## Release news
+### April 2026 update
+This update upgrades Code Maat to version 1.0.4 and transitions the project to Gulp 5 and Node.js 13+, ensuring compatibility with modern development environments.
+
 ### Version 3 release (January 2021)
-This release upgrades a number of packages and drops support for old Node versions in order to start migrating the code to ES6.
-
-### Version 2 release (September 2018)
-This release introduces new metrics trends in the system evolution analysis (number of commits, number of authors). This change requires a different logic to generate and render the revisions trend diagram, which breaks compatibility with respect to older versions.
-
-See the [CHANGELOG](./CHANGELOG.md) for release details.
+This release upgraded a number of packages and dropped support for old Node versions in order to start migrating the code to ES6.
 
 ## Pre-requisites
-* **Node.js** - **From release 1.0.0 code-forensics requires Nodejs 4 or later**. If you can't upgrade I suggest you use an earlier version of this package.
-* **npm v3** - code-forensics requires a flat install of its dependencies into the node_modules folder in order to visualise d3 diagrams.
-* **code-maat**: code-forensics is distributed with a pre-built (a _.jar_ package) version of code-maat that requires **Java 8**. Alternatively you can use **Docker**, provided you can [supply a docker image of code-maat](https://github.com/smontanari/code-forensics/wiki/Advanced-setup#code-maat-options). See the [Code Maat](https://github.com/adamtornhill/code-maat) repository for details on how to run the tool with Java or Docker.
+* **Node.js** - **code-forensics requires Node.js 13.0 or later**.
+* **npm >= 3.0.0** - code-forensics requires a flat install of its dependencies into the node_modules folder in order to visualise D3 (v7) diagrams.
+* **code-maat**: code-forensics is distributed with a pre-built (a _.jar_ package) version of code-maat that requires **Java 8 or later**. Alternatively you can use **Docker**, provided you can [supply a docker image of code-maat](https://github.com/smontanari/code-forensics/wiki/Advanced-setup#code-maat-options). See the [Code Maat](https://github.com/adamtornhill/code-maat) repository for details on how to run the tool with Java or Docker.
 
 ## Install
 
 `$ npm install code-forensics`
 
-**Note 1**: **code-forensics** is distributed as a nodejs module that runs on top of [gulp version 4](https://github.com/gulpjs/gulp). Be aware that if you have gulp already installed as a global module and it's not the required version you will have to explicitly execute the gulp command that comes with the installation of **code-forensics**.
+**Note 1**: **code-forensics** is distributed as a nodejs module that runs on top of [gulp version 5](https://github.com/gulpjs/gulp). Be aware that if you have gulp already installed as a global module and it's not the required version you will have to explicitly execute the gulp command that comes with the installation of **code-forensics**.
 
-**Note 2**: I would advise against installing **code-forensics** as a global module, as it requires certain packages to be at the top level of the node_modules folder in order to correctly run its internal http server and serve the pages to the browser for the visualisation part of the analysis. If **code-forensics** is installed as a global module such packages may conflict with already existing ones and that could cause all sorts of unpredictable issues.
+**Note 2**: I would advise against installing **code-forensics** as a global module, as it requires certain packages to be at the top level of the node_modules folder in order to correctly run its internal http server and serve the pages to the browser for the visualisation part of the analysis. If you have the tool installed locally, you can run tasks using `npx gulp <task-name>`.
 
 ## VCS support
 At the moment **code-forensics** can work with **git** and **svn** based repositories, however other version control systems could be supported in the future, given the ability of Code Maat to parse log data from the most popular ones.
@@ -63,7 +61,7 @@ require('code-forensics').configure(
 The only required configuration value is the file system path to the root directory of the version control repository to analyse, however this example is not practical and I would recommend you learn about and configure other parameters to more effectively target the analyses you intend to run.
 
 ### Running analyses
-Analyses are executed as a gulp task. Depending on how the gulp module is installed (as global or local) there are different ways to invoke the gulp command. Here, to simplify the examples, I will assume it is available on your command PATH. I will also assume you are running the required version (4) of gulp.
+Analyses are executed as a gulp task. Depending on how the gulp module is installed (as global or local) there are different ways to invoke the gulp command. Here, to simplify the examples, I will assume it is available on your command PATH. I will also assume you are running the required version (5) of gulp.
 
 Each analysis may require or accept optional parameters.
 ```
@@ -99,7 +97,7 @@ The `help` task itself will list all the tasks along with their description, e.g
 $ gulp help
 ```
 
-If you're interested in inspecting the dependencies between tasks you can leverage gulp version 4 way of displaying exeactly that in a nice tree-like format: run `gulp -T` or `gulp --tasks`.
+If you're interested in inspecting the dependencies between tasks you can leverage gulp version 5 way of displaying exeactly that in a nice tree-like format: run `gulp -T` or `gulp --tasks`.
 
 #### Task usage information
 In order to learn which parameters can be passed to a task you can type the following command:
@@ -162,13 +160,6 @@ The results can then be displayed in a word cloud diagram at the url given above
     </tr>
   </tbody>
 </table>
-
-## Upcoming features
-In time I'm also planning to add the following analyses in future versions of code-forensics:
-- code fragmentation analysis: to be used together with the current developer effort analysis to see if the fragmentation in your files is healthy or not.
-- code age analysis: another perspective to find out how old and stable the different parts of your codebase actually are.
-
-Of course, if you think there could be any new analysis or feature that could be useful in this tool, you're welcome to open a new issue and even to help directly with the code!
 
 ## License
 Copyright &copy; 2016-2021 Silvio Montanari
