@@ -73,17 +73,17 @@ By default running gulp without any argument will print the list of all the top 
 $ gulp list-analysis-tasks
 ```
 Currently the following analyses are implemented:
-* **javascript-complexity-trend-analysis** (when JavaScript is enabled)
-* **ruby-complexity-trend-analysis** (when Ruby is enabled)
-* **sloc-trend-analysis**
-* **hotspot-analysis**
-* **sum-of-coupling-analysis**
-* **temporal-coupling-analysis**
-* **system-evolution-analysis**
-* **developer-effort-analysis**
-* **developer-coupling-analysis**
-* **knowledge-map-analysis**
-* **commit-message-analysis**
+* **sloc-trend-analysis**: Analyse the sloc trend in time for a particular file
+* **javascript-complexity-trend-analysis**: Analyse the complexity trend in time for a particular javascript file
+* **ruby-complexity-trend-analysis**: Analyse the complexity trend in time for a particular ruby file
+* **sum-of-coupling-analysis**: Analyse the sum of coupling for each file
+* **temporal-coupling-analysis**: Analyse the evolution of coupling in time for a particular file
+* **hotspot-analysis**: Analyse the complexity and churn of source code to identify hotspots
+* **commit-message-analysis**: Analyse the number of occurrencies of commit message words
+* **developer-effort-analysis**: Analyse the distribution of effort (revisions) amongst developers/teams
+* **developer-coupling-analysis**: Analyse the ownership and communication coupling between developers
+* **knowledge-map-analysis**: Analyse the distribution of knowledge amongst developers/teams for each file
+* **system-evolution-analysis**: Analyse the evolution and the coupling in time of different parts of your system
 
 #### List all available tasks
 There are different options to print all the available tasks.
@@ -93,7 +93,12 @@ The `help` task itself will list all the tasks along with their description, e.g
 $ gulp help
 ```
 
-If you're interested in inspecting the dependencies between tasks you can leverage gulp version 5 way of displaying exeactly that in a nice tree-like format: run `gulp -T` or `gulp --tasks`.
+To see a simple list of all registered tasks, run:
+```
+$ gulp --tasks-simple
+```
+
+If you're interested in inspecting the dependencies between tasks you can leverage gulp version 5 way of displaying exactly that in a nice tree-like format: run `gulp -T` or `gulp --tasks`.
 
 #### Task usage information
 In order to learn which parameters can be passed to a task you can type the following command:
