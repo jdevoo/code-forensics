@@ -1,12 +1,10 @@
 code-forensics
 --------------
 
-![Run tests](https://github.com/smontanari/code-forensics/workflows/Run%20tests/badge.svg?branch=master)
-
 **code-forensics** is a toolset for analysing codebases stored in a version control system. It leverages the repository logs, or version history data, to perform deep analyses with regards to complexity, logical coupling, authors coupling and to inspect the evolution in time of different parts of a software system with respect to metrics like code churn and number of revisions.
 
 ## Credits
-This project is based on the excellent work of **Adam Tornhill** and his command line tool [Code Maat](https://github.com/adamtornhill/code-maat). The majority of the analysis that **code-forensics** performs are actually described in Adam's book [Your Code as a Crime Scene](https://pragprog.com/book/atcrime/your-code-as-a-crime-scene).
+This project is forked from Silvio Montanari's [code-forensics](https://github.com/smontanari/code-forensics) and based on the excellent work of **Adam Tornhill** and his command line tool [Code Maat](https://github.com/adamtornhill/code-maat). The majority of the analysis that **code-forensics** performs are actually described in Adam's book [Your Code as a Crime Scene](https://pragprog.com/book/atcrime/your-code-as-a-crime-scene).
 
 ## Release news
 ### April 2026 update
@@ -18,7 +16,7 @@ This release upgraded a number of packages and dropped support for old Node vers
 ## Pre-requisites
 * **Node.js** - **code-forensics requires Node.js 13.0 or later**.
 * **npm >= 3.0.0** - code-forensics requires a flat install of its dependencies into the node_modules folder in order to visualise D3 (v7) diagrams.
-* **code-maat**: code-forensics is distributed with a pre-built (a _.jar_ package) version of code-maat that requires **Java 8 or later**. Alternatively you can use **Docker**, provided you can [supply a docker image of code-maat](https://github.com/smontanari/code-forensics/wiki/Advanced-setup#code-maat-options). See the [Code Maat](https://github.com/adamtornhill/code-maat) repository for details on how to run the tool with Java or Docker.
+* **code-maat**: code-forensics is distributed with a pre-built (a _.jar_ package) version of code-maat that requires **Java 8 or later**. Alternatively you can use **Docker**, provided you can [supply a docker image of code-maat](https://github.com/jdevoo/code-forensics/wiki/Advanced-setup#code-maat-options). See the [Code Maat](https://github.com/adamtornhill/code-maat) repository for details on how to run the tool with Java or Docker.
 
 ## Install
 
@@ -40,9 +38,7 @@ This software is not meant to be a commercial tool, hence support for various op
 ## Usage
 This is only a short description on how to get started with **code-forensics**.
 
-PLEASE REFER TO THE [WIKI PAGES](https://github.com/smontanari/code-forensics/wiki) FOR A MORE COMPREHENSIVE DOCUMENTATION.
-
-Before posting a new issue please make sure you check out the **[Troubleshooting guide](https://github.com/smontanari/code-forensics/wiki/Troubleshooting)** and the **[Frequently Asked Questions](https://github.com/smontanari/code-forensics/wiki/Faq)** wiki pages.
+PLEASE REFER TO THE [WIKI PAGES](https://github.com/jdevoo/code-forensics/wiki) FOR A MORE COMPREHENSIVE DOCUMENTATION.
 
 ### Minimal configuration
 **code-forensics** runs as a set of gulp tasks, therefore it requires a `gulpfile.js` to bootstrap gulp, however there is no need to know the task declaration syntax, as all the necessary tasks are defined inside **code-forensics**.
@@ -69,7 +65,7 @@ $ gulp <analysis-task-name> [parameters]
 ```
 See [below](#task-usage-information) how to learn about any available task parameter.
 
-**Note: it is highly recommended to specify a time interval for any analysis**. If not, **code-forensics** will attempt to analyse the git commits for the current date only, most likely resulting in empty or near empty reports. You can specify a time interval via command line parameters or through the configuration file. Please refer to the [provided documentation](https://github.com/smontanari/code-forensics/wiki/Tasks-parameters).
+**Note: it is highly recommended to specify a time interval for any analysis**. If not, **code-forensics** will attempt to analyse the git commits for the current date only, most likely resulting in empty or near empty reports. You can specify a time interval via command line parameters or through the configuration file. Please refer to the [provided documentation](https://github.com/jdevoo/code-forensics/wiki/Tasks-parameters).
 
 #### List analysis tasks
 By default running gulp without any argument will print the list of all the top level analysis tasks. Alternatively you can explicitly run the task `list-analysis-tasks`:
@@ -106,7 +102,7 @@ $ gulp help --taskName=<task-name>
 ```
 
 ##### Temporal period of analysis
-For most tasks it's possible to specify a time period for which the analysis is performed by passing the parameters _dateFrom_ and _dateTo_. This is particularly useful to understand the evolution of the code in time and analyse negative or positive trends of particular metrics (see the [wiki pages](https://github.com/smontanari/code-forensics/wiki/Tasks-parameters#datetime-interval-of-analysis) for more detailed documentation).
+For most tasks it's possible to specify a time period for which the analysis is performed by passing the parameters _dateFrom_ and _dateTo_. This is particularly useful to understand the evolution of the code in time and analyse negative or positive trends of particular metrics (see the [wiki pages](https://github.com/jdevoo/code-forensics/wiki/Tasks-parameters#datetime-interval-of-analysis) for more detailed documentation).
 
 ### Visualise the reports
 The results of each analysis can be displayed in the form of D3 diagrams.
@@ -143,20 +139,20 @@ The results can then be displayed in a word cloud diagram at the url given above
 <table>
   <tbody>
     <tr>
-      <td>Hotspot</td><td><a href="https://raw.githubusercontent.com/wiki/smontanari/code-forensics/images/hotspot1.jpg"><img src="https://raw.githubusercontent.com/wiki/smontanari/code-forensics/images/hotspot1-th.jpg"></a></td>
-      <td>Complexity trend</td><td><a href="https://raw.githubusercontent.com/wiki/smontanari/code-forensics/images/cx-trend2.jpg"><img src="https://raw.githubusercontent.com/wiki/smontanari/code-forensics/images/cx-trend2-th.jpg"></a></td>
+      <td>Hotspot</td><td><a href="https://raw.githubusercontent.com/wiki/jdevoo/code-forensics/images/hotspot1.jpg"><img src="https://raw.githubusercontent.com/wiki/jdevoo/code-forensics/images/hotspot1-th.jpg"></a></td>
+      <td>Complexity trend</td><td><a href="https://raw.githubusercontent.com/wiki/jdevoo/code-forensics/images/cx-trend2.jpg"><img src="https://raw.githubusercontent.com/wiki/jdevoo/code-forensics/images/cx-trend2-th.jpg"></a></td>
     </tr>
     <tr>
-      <td>System evolution</td><td><a href="https://raw.githubusercontent.com/wiki/smontanari/code-forensics/images/sea2.jpg"><img src="https://raw.githubusercontent.com/wiki/smontanari/code-forensics/images/sea2-th.jpg"></a></td>
-      <td>Commit messages</td><td><a href="https://raw.githubusercontent.com/wiki/smontanari/code-forensics/images/cma1.jpg"><img src="https://raw.githubusercontent.com/wiki/smontanari/code-forensics/images/cma1-th.jpg"></a></td>
+      <td>System evolution</td><td><a href="https://raw.githubusercontent.com/wiki/jdevoo/code-forensics/images/sea2.jpg"><img src="https://raw.githubusercontent.com/wiki/jdevoo/code-forensics/images/sea2-th.jpg"></a></td>
+      <td>Commit messages</td><td><a href="https://raw.githubusercontent.com/wiki/jdevoo/code-forensics/images/cma1.jpg"><img src="https://raw.githubusercontent.com/wiki/jdevoo/code-forensics/images/cma1-th.jpg"></a></td>
     </tr>
     <tr>
-      <td>Developer coupling</td><td><a href="https://raw.githubusercontent.com/wiki/smontanari/code-forensics/images/dc2.jpg"><img src="https://raw.githubusercontent.com/wiki/smontanari/code-forensics/images/dc2-th.jpg"></a></td>
-      <td>Developer network</td><td><a href="https://raw.githubusercontent.com/wiki/smontanari/code-forensics/images/dc5.jpg"><img src="https://raw.githubusercontent.com/wiki/smontanari/code-forensics/images/dc5-th.jpg"></a></td>
+      <td>Developer coupling</td><td><a href="https://raw.githubusercontent.com/wiki/jdevoo/code-forensics/images/dc2.jpg"><img src="https://raw.githubusercontent.com/wiki/jdevoo/code-forensics/images/dc2-th.jpg"></a></td>
+      <td>Developer network</td><td><a href="https://raw.githubusercontent.com/wiki/jdevoo/code-forensics/images/dc5.jpg"><img src="https://raw.githubusercontent.com/wiki/jdevoo/code-forensics/images/dc5-th.jpg"></a></td>
     </tr>
     <tr>
-      <td>Developer effort</td><td><a href="https://raw.githubusercontent.com/wiki/smontanari/code-forensics/images/de2.jpg"><img src="https://raw.githubusercontent.com/wiki/smontanari/code-forensics/images/de2-th.jpg"></a></td>
-      <td>Knowledge map</td><td><a href="https://raw.githubusercontent.com/wiki/smontanari/code-forensics/images/km2.jpg"><img src="https://raw.githubusercontent.com/wiki/smontanari/code-forensics/images/km2-th.jpg"></a></td>
+      <td>Developer effort</td><td><a href="https://raw.githubusercontent.com/wiki/jdevoo/code-forensics/images/de2.jpg"><img src="https://raw.githubusercontent.com/wiki/jdevoo/code-forensics/images/de2-th.jpg"></a></td>
+      <td>Knowledge map</td><td><a href="https://raw.githubusercontent.com/wiki/jdevoo/code-forensics/images/km2.jpg"><img src="https://raw.githubusercontent.com/wiki/jdevoo/code-forensics/images/km2-th.jpg"></a></td>
     </tr>
   </tbody>
 </table>
