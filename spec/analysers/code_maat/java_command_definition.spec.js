@@ -24,7 +24,7 @@ describe('codemaat java command definition', function() {
         cmd: 'java',
         args: [
           '-Djava.awt.headless=true',
-          { '-jar': expect.stringMatching('code-maat-1.0.1-standalone.jar') }
+          { '-jar': expect.stringMatching('code-maat-1.0.4-standalone.jar') }
         ],
         installCheck: expect.any(Function)
       });
