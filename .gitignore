@@ -1,5 +1,4 @@
 node_modules/
-test_fixtures/
 .node-version
 npm-debug.log
 todo.txt

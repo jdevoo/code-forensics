@@ -67,6 +67,19 @@ console.log(ansi.cyan('serving "/lib"  files from ' + libPath));
 console.log(ansi.cyan('serving "/data" files from ' + dataPath));
 console.log('Hit CTRL-C to stop the server');
 
+// Keep the event loop alive until local-web-server initializes and binds
+var keepAliveTimer = setInterval(function() {}, 1000);
+
+process.on('uncaughtException', function(err) {
+  console.error('Uncaught Exception:', err.stack || err);
+  process.exit(1);
+});
+
+process.on('unhandledRejection', function(reason, promise) {
+  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+  process.exit(1);
+});
+
 import('local-web-server').then(function(LocalWebServer) {
   options.moduleDir = [
     Path.resolve(__dirname, '../node_modules'),
@@ -74,13 +87,40 @@ import('local-web-server').then(function(LocalWebServer) {
     Path.resolve('/home/jdevoo/playground/code-forensic/node_modules')
   ];
   LocalWebServer.default.create(options).then(function(lws) {
+    var clearTimer = function() {
+      clearInterval(keepAliveTimer);
+    };
+
+    if (lws.server.listening) {
+      clearTimer();
+    } else {
+      lws.server.on('listening', function() {
+        clearTimer();
+      });
+    }
+
+    lws.server.on('error', function(err) {
+      clearInterval(keepAliveTimer);
+      console.error(ansi.red('Server error: ' + err.message));
+      process.exit(1);
+    });
+
     ['SIGINT', 'SIGTERM'].forEach(function(event) {
       process.on(event, function() {
         lws.server.close();
         console.log(ansi.yellow('\nWeb server stopped.'));
+        process.exit(0);
       });
     });
+  }).catch(function(err) {
+    clearInterval(keepAliveTimer);
+    console.error(ansi.red('Failed to start web server: ' + err.message));
+    process.exit(1);
   });
+}).catch(function(err) {
+  clearInterval(keepAliveTimer);
+  console.error(ansi.red('Failed to import local-web-server: ' + err.message));
+  process.exit(1);
 });
 
 /* eslint-enable no-console */
